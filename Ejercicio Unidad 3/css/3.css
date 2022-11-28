@@ -1,0 +1,74 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 4rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+input {
+  display: block;
+  min-width: 20rem;
+  margin-top: 0.2rem;
+  background: rgba(0, 0, 0, 0.03);
+  padding: 0.5rem 0.1rem;
+  border: 0;
+  border-bottom: 5px solid var(--hotpink);
+  font-size: 1.5rem;
+  color: var(--hotpink);
+}
+
+input:focus {
+  outline: 0;
+  background: rgba(0, 0, 0, 0.06);
+}
+
+label:nth-of-type(even) input {
+  border-bottom-color: var(--orange);
+  color: var(--orange);
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  background-image: var(--gradient);
+  padding: 0.75rem 4rem;
+  border-radius: 5rem;
+  color: white;
+  font-family: var(--font-display);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  line-height: 1;
+  transition: 0.3s;
+}
+
+button:hover,
+button:focus {
+  opacity: 0.9;
+  outline: 0;
+}
+
+.mensaje {
+  background-image: var(--gradient);
+  margin-bottom: 2rem;
+  color: white;
+  padding: 1rem 3rem;
+  border-radius: 10px;
+  font-size: 1.5rem;
+}
+
+.mensaje:empty {
+  display: none;
+}
+
+.mensaje p {
+  margin: 1em 0;
+}
