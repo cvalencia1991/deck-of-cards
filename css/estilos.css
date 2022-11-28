@@ -1,0 +1,325 @@
+body {
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.bienvenida {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 1;
+}
+
+.bienvenida.visible{
+  display: flex;
+}
+
+.bienvenida h1 {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-size: 5rem;
+  margin-top: 0;
+}
+
+.bienvenida-botones {
+  display: flex;
+}
+
+.bienvenida button {
+  padding: 1rem 3rem;
+  margin: 0 1rem;
+  min-width: 20rem;
+}
+
+.cabecera {
+  padding: 0.5rem 2rem;
+  background: white;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.cabecera-titulo {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  line-height: 1;
+  margin: 0;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.cabecera-num {
+  font-family: var(--font-display);
+  color: var(--hotpink);
+  font-weight: 400;
+  font-size: 3.5rem;
+  line-height: 0.9;
+}
+
+.contadores {
+  display: flex;
+}
+
+.contador-item {
+  margin-right: 2rem;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.mesa {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  max-width: 56rem;
+  margin: auto;
+}
+
+.tarjeta {
+  width: 6rem;
+  height: 6rem;
+  margin: 0.5rem;
+  border-radius: 0.3em;
+  background-image: var(--gradient);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25), 4px 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  transition: 0.3s;
+  cursor: pointer;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.tarjeta__contenido {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transform: rotateY(-180deg);
+  backface-visibility: hidden;
+  background-color: white;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25), 4px 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 0.3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  padding-top: 0.4rem;
+}
+
+.tarjeta__contenido::selection {
+  background: transparent;
+}
+
+.tarjeta.descubierta {
+  transform: rotateY(-180deg);
+}
+
+@keyframes error {
+  10%,
+  90% {
+    transform: rotateY(-180deg) translateX(-1px);
+  }
+  20%,
+  80% {
+    transform: rotateY(-180deg) translateX(2px);
+  }
+  30%,
+  50%,
+  70% {
+    transform: rotateY(-180deg) translateX(-4px);
+  }
+  40%,
+  60% {
+    transform: rotateY(-180deg) translateX(4px);
+  }
+}
+
+@keyframes acierto {
+  from {
+    transform: rotateY(-180deg) scale3d(1, 1, 1);
+    opacity: 1;
+  }
+
+  25% {
+    transform: rotateY(-180deg) scale3d(1.1, 1.1, 1.1);
+    opacity: 1;
+  }
+
+  to {
+    transform: rotateY(-180deg) scale3d(1, 1, 1);
+    opacity: 0;
+  }
+}
+
+.acertada {
+  pointer-events: none;
+}
+
+.acertada .tarjeta__contenido {
+  animation: acierto 1.3s ease-in-out forwards;
+}
+
+.error {
+  animation: error 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+.sube-nivel,
+.game-over,
+.end-game {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: var(--gradient);
+}
+
+.sube-nivel.visible,
+.game-over.visible,
+.end-game.visible{
+  display: flex;
+}
+
+.modal {
+  background: white;
+  padding: 3rem 3rem 1rem;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25), 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal h2 {
+  color: var(--orange);
+  font-family: var(--font-display);
+  margin: 0;
+}
+
+.modal p {
+  font-size: 1.5rem;
+}
+
+.modal button {
+  margin: 3rem 0;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  background-image: var(--gradient);
+  padding: 0.75rem 4rem;
+  border-radius: 5rem;
+  color: white;
+  font-family: var(--font-display);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  line-height: 1;
+  transition: 0.3s;
+}
+
+button:hover,
+button:focus {
+  opacity: 0.9;
+  outline: 0;
+}
+
+.modal .reiniciar {
+  color: var(--hotpink);
+  background: transparent;
+  border: 0;
+  text-transform: capitalize;
+  font-family: var(--font);
+  font-size: 1rem;
+  margin: 0;
+}
+
+
+.sonido{
+  display: none;
+}
+
+.cronometro-oculto{
+  display: none;
+}
+
+.control-nivel{
+  position: absolute;
+  font-size: .8rem;
+  top: 2.9rem;
+  right: .5rem;
+  padding: 0;
+  width: 1.1rem;
+  height: 1.1rem;
+  line-height: .68rem;
+  display: flex;
+  justify-content: center;
+  background: var(--hotpink);
+}
+
+.control-oculto{
+  display: none;
+}
+
+.selecciona-nivel{
+  background-color: var(--hotpink);
+  position: fixed;
+  width: 250px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transform: translateX(250px);
+  transition: transform .3s;
+  padding: 1rem 2rem;
+}
+
+.selecciona-nivel.visible{
+  transform: translateX(0);
+}
+
+.selecciona-nivel button{
+  background: transparent;
+  padding: 0;
+}
+
+.selecciona-nivel ul{
+  list-style: none;
+  padding-left: 0;
+}
+
+.selecciona-nivel li{
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.cierra-niveles{
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  font-size: 2rem;
+  font-family: sans-serif;
+  font-weight: 300;
+}
