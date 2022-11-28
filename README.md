@@ -6,7 +6,7 @@
   <img src="domestik_logo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
-  <h3><b>Dek of cards</b></h3>
+  <h3><b>Deck of cards</b></h3>
 
 </div>
 
