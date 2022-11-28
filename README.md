@@ -35,7 +35,6 @@
 
 # 📖 Deck-of-Cards-game <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
 
 this is an implementation of using simple javascript in a project of a game interactive with cards with emojis
 
@@ -43,7 +42,6 @@ this is an implementation of using simple javascript in a project of a game inte
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
 
 <details>
   <summary>Client</summary>
@@ -60,7 +58,6 @@ this is an implementation of using simple javascript in a project of a game inte
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
 
 - Deploy a two diferents types of game relaxing and real Game
 - Interact of number of intents 
@@ -72,7 +69,6 @@ this is an implementation of using simple javascript in a project of a game inte
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
 
 - [Live Demo Link](Working on it)
 
@@ -81,8 +77,6 @@ this is an implementation of using simple javascript in a project of a game inte
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
-
-> Describe how a new developer could make use of your project.
 
 To get a local copy up and running, follow these steps.
 
@@ -154,8 +148,6 @@ Example:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
-
 - implement with Vue.js 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -174,8 +166,6 @@ Feel free to check the [issues page](https://github.com/cvalencia1991/deck-of-ca
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
-
 If you like this project you can click a ⭐️
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -184,17 +174,12 @@ If you like this project you can click a ⭐️
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> Give credit to everyone who inspired your codebase.
 
 I would like to thank to Domestika Course
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- FAQ (optional) -->
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LICENSE -->
 
