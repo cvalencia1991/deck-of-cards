@@ -27,13 +27,17 @@ body {
 .bienvenida h1 {
   font-family: var(--font-display);
   text-transform: uppercase;
-  font-size: 5rem;
+  font-size: 2rem;
   margin-top: 0;
 }
 
 .bienvenida-botones {
   display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
+
+
 
 .bienvenida button {
   padding: 1rem 3rem;
@@ -322,4 +326,16 @@ button:focus {
   font-size: 2rem;
   font-family: sans-serif;
   font-weight: 300;
+}
+
+
+@media screen and (min-width: 480px) {
+  .bienvenida-botones {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .bienvenida h1 {
+    font-size: 5rem;
+  }
 }
