@@ -67,10 +67,18 @@ this is an implementation of using simple javascript in a project of a game inte
 
 <!-- LIVE DEMO -->
 
+
+##  Video
+
+
+
+https://user-images.githubusercontent.com/107327344/205464072-92c5558e-e731-4a4b-9455-89a7e79d7ff0.mp4
+
+
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 
-- [Live Demo Link](Working on it)
+- [Live Demo Link](https://cvalencia1991.github.io/deck-of-cards/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
